@@ -9,10 +9,6 @@ import teacherRouter from "./routes/teacherRoutes.js";
 import examRouter from "./routes/examRoutes.js";
 import studentSubmissionRoutes from "./routes/studentSubmissionRoutes.js";
 import studentRouter from "./routes/StudentRoutes.js";
-
-
-
-
 import generateQuestionsRouter from "./routes/generateQuestions.js";
 
 const app = express();
