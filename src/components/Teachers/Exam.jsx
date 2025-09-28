@@ -232,7 +232,7 @@ const Exams = ({ teacherName = "Teacher" }) => {
     setPreviewLoading(true);
     try {
       // CALL the backend route that generates questions
-      const data = await fetchJson(`${API_BASE}/api/exams/preview`, {
+      const data = await fetchJson(`${API_BASE}/exams/preview`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
