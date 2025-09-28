@@ -335,7 +335,7 @@ const Exams = ({ teacherName = "Teacher" }) => {
     }));
     setSaving(true);
     try {
-      const data = await fetchJson(`${API_BASE}/save`, {
+      const data = await fetchJson(`${API_BASE}/exams/save`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
