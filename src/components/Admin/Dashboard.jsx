@@ -35,9 +35,13 @@ const AdminDashboard = () => {
     try {
       const token = localStorage.getItem("adminToken");
       await axios.post(
-        "http://localhost:5000/api/teachers/register",
+        "https://my-school-project.onrender.com/api/teachers/register",
         { name, email, username, password },
-        { headers: { Authorization: `Bearer ${token}` } }
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
       setMessage("✅ Teacher registered successfully!");
       setName("");

@@ -17,7 +17,7 @@ const TeacherLogin = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/teachers/login", {
+      const res = await axios.post("http://my-school-project.onrender/api/teachers/login", {
         email,       
         password,
       });
