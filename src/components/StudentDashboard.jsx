@@ -9,7 +9,7 @@ const API_BASE = (() => {
     if (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_API_BASE) return process.env.NEXT_PUBLIC_API_BASE;
     if (typeof process !== "undefined" && process.env?.REACT_APP_API_BASE) return process.env.REACT_APP_API_BASE;
   } catch (e) {}
-  return "http://my-school-project.onrender/api";
+  return "http://my-school-project.onrender.com/api";
 })();
 
 // Helper: fetch JSON with nicer errors
