@@ -232,16 +232,15 @@ const Exams = ({ teacherName = "Teacher" }) => {
     setPreviewLoading(true);
     try {
       // CALL the backend route that generates questions
-      const data = await fetchJson(`${API_BASE}/exams/preview`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const data = await fetchJson(`${API_BASE}/generate-questions/preview`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           subject: meta.subject,
           questions: Number(meta.questionsCount),
-          difficulty: meta.difficulty
-        })
+          difficulty: meta.difficulty,
+        }),
       });
-      
 
       const q = (data.questions || []).map((qq) => ({
         id: cryptoRandomId(),
